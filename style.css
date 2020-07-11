@@ -1,0 +1,484 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    color: #363a3d;
+    font-size: 16px;
+    position: relative;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 3rem 0;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 3rem 0;
+}
+
+h5, h6 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+a {
+    color: #8f91ff;
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+
+a:hover {
+    color: #999ac7;
+}
+
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-sm {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+
+
+/* Logo Positioning Absolute */
+.logo-box {
+    position: absolute;
+    top: 36px;
+    left: 80px;
+}
+
+.logo-box img {
+    width: 64px;
+    height: auto;
+}
+
+
+/* Sign Up Section */
+.signup {
+    background-color: #775ef0;
+    height: 105vh;
+    padding: 13rem 0 3rem 0;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.signup h5 {
+    margin: 4rem 0 1rem 0;
+    font-weight: 300;
+}
+
+.signup form {
+    padding: 2rem 0 1rem 0;
+}
+
+.label-box {
+    display: inline-block;
+    position: relative;
+    padding: 3px 0 3px 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+}
+
+.label-box:nth-child(2) {
+    margin-left: 1rem;
+}
+
+/* Hide the browser's default radio button */
+.label-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.label-box input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.label-box .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+}
+
+#signup-num {
+    width: 290px;
+    height: 60px;
+    padding: 20px 8px 8px 20px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #5646c0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#signup-num::placeholder {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.label-box:nth-child(5) {
+    margin-left: 1rem;
+}
+
+.signup input[type=submit] {
+    width: 204px;
+    height: 56px;
+    padding: 16px 40px;
+    margin: 25px 0;
+    border: 0;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.signup-end a{
+    color: white;
+}
+
+/* Intro Section */
+.intro {
+    padding-bottom: 4rem;
+}
+
+.intro h3 {
+    margin-top: 6rem;
+}
+
+.intro p {
+    color: #373a3c;
+    margin-top: 1.5rem;
+    max-width: 640px;
+}
+
+.intro i {
+    margin-bottom: 2rem;
+}
+
+/* Phone Section */
+.city-div {
+    position: relative;
+    height: 530px;
+    background-image: url(./img/city.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.phone-img {
+    position: absolute;
+    top: 3rem;
+    left: 35%;
+}
+
+.phone-txt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 360px;
+}
+
+.phone-txt h3 {
+    line-height: 48px;
+    justify-self: right;
+    width: 300px;
+    font-size: 42px;
+}
+
+.phone-txt div {
+    margin: 48px 0;
+}
+
+.phone-txt div p {
+    margin-top: 1rem;
+}
+
+/* Info Section */
+.info {
+    background-color: #f3f3f5;
+    padding: 4rem 0;
+    margin: 5rem 0;
+}
+
+.info-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-col h3 {
+    margin-top: 5rem;
+    max-width: 580px;
+}
+
+.info-col i {
+    width: 320px;
+    text-align: right;
+    padding-right: 4rem;
+    margin-top: 4rem;
+}
+
+.info-col p {
+    color: #373a3c;
+    margin-top: 1.5rem;
+    max-width: 530px;
+}
+
+
+/* FAQ */
+.col-faq {
+    max-width: 503px;
+    margin-left: auto;
+}
+
+.col-faq h3 {
+    line-height: 46px;
+    margin-bottom: 1rem;
+    width: 483px;
+}
+
+.faq-p {
+    display: none;
+}
+
+.faq-p p {
+    color: #373a3c;
+    margin-top: 1.5rem;
+    margin: 1rem 0;
+}
+
+.col-faq {
+    display: flex;
+    flex-direction: row;
+    max-width: 620px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.col-faq i {
+    width: 89px;
+    padding-top: 3.5rem;
+}
+
+.faq-left {
+    padding-right: 3rem;
+}
+
+.display {
+    display: block;
+}
+
+.footer {
+    padding: 6rem 0 3rem 0;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
+    }
+
+    h3 {
+        font-size: 40px;
+        line-height: 38px;
+        letter-spacing: -2px;
+    }
+
+    p{
+        color: rgb(55, 58, 60);
+    }
+
+    .logo-box {
+        position: absolute;
+        top: 2.8rem;
+        left: 2rem;
+    }
+
+    .signup {
+        padding: 9rem 0 3rem 0;
+    }
+
+    #signup-num {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .label-box:nth-child(5) {
+        margin: 0;
+    }
+
+    .col-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-3 div {
+        margin-bottom: 1.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #efeff1;
+    }
+
+    .city-div {
+        height: 280px;
+    }
+
+    .phone-img {
+        position: absolute;
+        top: 2rem;
+        left: 30%;
+    }
+
+    .phone-img img {
+        height: 360px;
+        width: auto;
+    }
+
+    .phone-txt {
+        display: block;
+        width: 90%;
+        margin: 7rem auto 0 auto;
+    }
+
+    .phone-txt h3 {
+        justify-self: left;
+        font-size: 35px;
+        letter-spacing: -2px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .phone-txt div {
+        margin: 0;
+    }
+
+    .info {
+        background-color: #f3f3f5;
+        margin: 1rem 0;
+    }
+    
+    .info-col {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .info-col h3 {
+        margin: 2rem 0;
+        max-width: 580px;
+    }
+    
+    .info-col i {
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        margin-top: 1rem;
+    }
+    
+    .info-col p {
+        color: #373a3c;
+        margin-top: 1rem;
+        max-width: 530px;
+    }
+
+    .info-col:nth-child(2) {
+        margin: 3rem 0 1rem 0;
+    }
+
+    .faq h2 {
+        font-size: 50px;
+        letter-spacing: -3px;
+        line-height: 48px;
+        font-weight: 550;
+    }
+
+    .faq h3 {
+        font-size: 35px;
+        line-height: 38px;
+        letter-spacing: -2px;
+        font-weight: 550;
+        width: 361px;
+        padding-bottom: 2rem;
+    }
+
+    .faq-left {
+        padding: 0;
+    }
+
+    .faq-icon i {
+        text-align: right;
+    }
+}
